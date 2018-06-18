@@ -10,3 +10,37 @@ html, body{
     background-image: url("../assets/footer.png");
     background-size: 50%;
 }
+
+#controls{
+    text-align: center;
+    color: white;
+    background-color: rgba(73, 73, 73, 0.466);
+    width: 150px;
+    position: absolute;
+    z-index: 5;
+    right: 0px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 125px;
+    height: 15px; /* Specified height */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: rgb(86, 76, 175); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: rgb(86, 76, 175); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}

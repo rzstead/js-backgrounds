@@ -1,11 +1,9 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext("2d");
-var stop = false;
-var frameCount = 0;
-var balls = [];
+var arcs = [];
 var windowHeight, windowWidth;
 
-class Ball {
+class Arc {
     constructor() {
         this.height = random(15, 50);
         this.width = this.height;
@@ -58,8 +56,8 @@ class Ball {
         }
 
         this.collision = function() {
-            for (let i = 0; i < balls.length; i++) {
-                const ball = balls[i];
+            for (let i = 0; i < arcs.length; i++) {
+                const ball = arcs[i];
                 if (ball != this) {
                     if (this.intersects(ball)) {
                         this.xFactor = this.xFactor * -1;
@@ -84,13 +82,13 @@ function random(min, max) {
 
 function makeBalls() {
     for (let i = 0; i < 85; i++) {
-        var ball = new Ball();
-        balls.push(ball);
+        var ball = new Arc();
+        arcs.push(ball);
     }
 }
 
 function drawBalls() {
-    balls.forEach(ball => {
+    arcs.forEach(ball => {
         ball.draw();
     });
 }

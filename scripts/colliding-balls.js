@@ -1,7 +1,5 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext("2d");
-var stop = false;
-var frameCount = 0;
 var balls = [];
 var windowHeight, windowWidth;
 

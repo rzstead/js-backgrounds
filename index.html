@@ -11,8 +11,22 @@
 </head>
 
 <body>
+    <div id="controls">
+        <label>Min Diameter</label>
+        <input type="range" min="25" max="2560", value="500" class="slider" id="minD">
+        <label>Min Line Width</label>
+        <input type="range" min="1" max="100", value="50" class="slider" id="minLW">
+        <label>Max Line Width</label>
+        <input type="range" min="1" max="100", value="50" class="slider" id="maxLW">
+        <label>Min Speed</label>
+        <input type="range" min="1" max="50", value="1" class="slider" id="minV">
+        <label>Max Speed</label>
+        <input type="range" min="1" max="50", value="25" class="slider" id="maxV">
+        <label># of Rings</label>
+        <input type="range" min="1" max="1000", value="300" class="slider" id="arcAmount">
+    </div>
     <canvas id="canvas"></canvas>
-    <script src="scripts/floating-arcs.js"></script>
+    <script src="scripts/concentric-arcs.js"></script>
 </body>
 
 </html>
